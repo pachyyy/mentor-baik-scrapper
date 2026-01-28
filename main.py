@@ -1,9 +1,8 @@
 import requests
 import json
-import time
 import os
 from requests.exceptions import Timeout, ConnectionError
-from payload import payload, bearer_token
+from payload import bearer_token, api_url
 
 
 # Create json folder if it doesn't exist
@@ -40,7 +39,6 @@ articles_list = []
 article_id_counter = 1
 since_id = 0
 next_id = 0
-api_url = "https://api.mentorbaik.com/v1/recent"
 
 print("\n" + "="*60)
 print("Starting to download articles...")
